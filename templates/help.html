@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Помощь{% endblock %}
+
+{% block content %}
+<h2 class="text-3xl font-bold text-primary mb-6">Помощь</h2>
+
+<div class="bg-white dark:bg-gray-800 rounded shadow p-6">
+    <h3 class="text-2xl font-semibold text-secondary">Команды Сервера</h3>
+    <ul class="list-disc list-inside mt-4 text-gray-600 dark:text-gray-300">
+        <li><strong>/spawn</strong> - Возвращает на спавн.</li>
+        <li><strong>/home</strong> - Устанавливает домашнюю точку.</li>
+        <li><strong>/warp</strong> - Позволяет телепортироваться к различным локациям.</li>
+        <li><strong>/msg</strong> - Отправляет личное сообщение игроку.</li>
+        <!-- Добавь другие команды по необходимости -->
+    </ul>
+</div>
+
+<div class="mt-6 bg-white dark:bg-gray-800 rounded shadow p-6">
+    <h3 class="text-2xl font-semibold text-secondary">Основная Информация</h3>
+    <p class="mt-4 text-gray-600 dark:text-gray-300">
+        Добро пожаловать на 2D2D.ORG! Наш сервер предлагает уникальный опыт анонимной анархии, где вы можете свободно исследовать, строить и сражаться без ограничений. Присоединяйтесь к нашему сообществу и начните свое приключение сегодня!
+    </p>
+</div>
+{% endblock %}

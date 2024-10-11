@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Донат{% endblock %}
+
+{% block content %}
+<h2 class="text-3xl font-bold text-primary mb-6">Донат</h2>
+<div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+    <!-- VIP -->
+    <div class="bg-white dark:bg-gray-800 rounded shadow p-6 w-80">
+        <h3 class="text-2xl font-semibold text-secondary">VIP</h3>
+        <p class="mt-2">Преимущества VIP:</p>
+        <ul class="list-disc list-inside mt-2 text-gray-600 dark:text-gray-300">
+            <li>Приоритетный доступ</li>
+            <li>Эксклюзивные скины</li>
+            <li>Увеличенный инвентарь</li>
+        </ul>
+        <button class="mt-4 bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded w-full">Поддержать VIP</button>
+    </div>
+    <!-- MVP -->
+    <div class="bg-white dark:bg-gray-800 rounded shadow p-6 w-80">
+        <h3 class="text-2xl font-semibold text-secondary">MVP</h3>
+        <p class="mt-2">Преимущества MVP:</p>
+        <ul class="list-disc list-inside mt-2 text-gray-600 dark:text-gray-300">
+            <li>Все преимущества VIP</li>
+            <li>Доступ к эксклюзивным зонам</li>
+            <li>Специальные команды</li>
+        </ul>
+        <button class="mt-4 bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded w-full">Поддержать MVP</button>
+    </div>
+    <!-- Apex -->
+    <div class="bg-white dark:bg-gray-800 rounded shadow p-6 w-80">
+        <h3 class="text-2xl font-semibold text-secondary">Apex</h3>
+        <p class="mt-2">Преимущества Apex:</p>
+        <ul class="list-disc list-inside mt-2 text-gray-600 dark:text-gray-300">
+            <li>Все преимущества MVP</li>
+            <li>Персонализированный сервер</li>
+            <li>Приглашение в команду</li>
+        </ul>
+        <button class="mt-4 bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded w-full">Поддержать Apex</button>
+    </div>
+</div>
+{% endblock %}
