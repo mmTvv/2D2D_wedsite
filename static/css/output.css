@@ -592,34 +592,6 @@ video {
   position: static;
 }
 
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.left-16 {
-  left: 4rem;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -627,6 +599,10 @@ video {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .mt-10 {
@@ -661,28 +637,12 @@ video {
   display: none;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-40 {
   height: 10rem;
 }
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-20 {
-  width: 5rem;
 }
 
 .w-6 {
@@ -713,10 +673,6 @@ video {
   flex-direction: column;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-center {
   align-items: center;
 }
@@ -743,18 +699,8 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
 .rounded {
   border-radius: 0.25rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
 }
 
 .bg-gray-100 {
@@ -770,20 +716,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
-.from-primary {
-  --tw-gradient-from: #4800D4 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(72 0 212 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-secondary {
-  --tw-gradient-to: #F369BD var(--tw-gradient-to-position);
 }
 
 .object-cover {
@@ -896,8 +828,10 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.transition-all {
-  transition-property: all;
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -928,6 +862,118 @@ video {
   /* Увеличим до 24px */
 }
 
+#login-btn {
+  margin-left: 25px;
+  /* Примерно соответствует классу ml-4 */
+}
+
+/* Основные стили для сайта */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Сайдбар */
+
+.sidebar {
+  width: 90px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4800D4, #F369BD);
+  transition: width 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar:hover {
+  width: 250px;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+  width: 170px;
+  transition: transform 0.3s;
+}
+
+.sidebar:hover .logo img {
+  transform: rotate(360deg);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #ffffff;
+}
+
+.sidebar ul li a .icon {
+  font-size: 24px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.sidebar ul li a span {
+  display: none;
+  white-space: nowrap;
+}
+
+.sidebar:hover ul li a span {
+  display: inline;
+}
+
+/* Активная ссылка */
+
+.sidebar ul li a.active {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Футер */
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.gradient {
+  color: linear-gradient(to bottom, #4800D4, #F369BD);
+}
+
 .hover\:bg-secondary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 105 189 / var(--tw-bg-opacity));
@@ -936,15 +982,6 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.group:hover .group-hover\:block {
-  display: block;
-}
-
-.group:hover .group-hover\:bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 105 189 / var(--tw-bg-opacity));
 }
 
 .dark\:bg-gray-800:is(.dark *) {
@@ -968,8 +1005,8 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:w-48 {
-    width: 12rem;
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .md\:grid-cols-2 {
@@ -994,10 +1031,5 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }

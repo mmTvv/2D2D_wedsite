@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}Новости{% endblock %}
+{% block title %}News{% endblock %}
 
 {% block content %}
-<h2 class="text-3xl font-bold text-primary mb-6 text-center">Новости</h2>
+<h2 class="text-3xl font-bold text-primary mb-6 text-center">News</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     {% for i in range(1, 10) %}
     <div class="bg-white dark:bg-gray-800 rounded shadow p-4">
         <img src="{{ url_for('static', filename='images/news' ~ i ~ '.jpg') }}" class="w-full h-40 object-cover rounded" alt="Новость {{ i }}">
-        <h3 class="mt-4 text-xl font-semibold">Заголовок Новости {{ i }}</h3>
-        <p class="mt-2 text-gray-600 dark:text-gray-300">Краткое описание новости {{ i }}...</p>
+        <h3 class="mt-4 text-xl font-semibold">News {{ i }}</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">news.... {{ i }}...</p>
     </div>
     {% endfor %}
 </div>
